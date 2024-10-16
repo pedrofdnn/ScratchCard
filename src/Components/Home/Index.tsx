@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ScratchCard from "../Cards";
+import bagImage from '../../Assets/img/bag.png';
 
 interface ScratchCardProps {
     id: number;
@@ -10,7 +11,7 @@ interface ScratchCardProps {
 export default function HomePage({ id, image, onScratch }: ScratchCardProps) {
 
     const [cards, setCards] = useState([
-        { id: 1, image: '/path/to/image1.jpg' },
+        { id: 1, image: bagImage },
         { id: 2, image: '/path/to/image2.jpg' },
         { id: 3, image: '/path/to/image3.jpg' },
         { id: 4, image: '/path/to/image4.jpg' },
@@ -38,7 +39,7 @@ export default function HomePage({ id, image, onScratch }: ScratchCardProps) {
 
             <div>
                 <button onClick={shuffleCards} >Reiniciar Cards</button>
-                <img src={image} alt={`Card ${id}`} />
+                <img src={image} alt={`Card ${id} ${image}`} />
             </div>
         </div>
     )
