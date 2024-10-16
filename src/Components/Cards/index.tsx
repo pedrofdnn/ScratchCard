@@ -1,3 +1,4 @@
+import '../../App.scss'
 
 interface CardsProps {
   id: number;
@@ -12,9 +13,9 @@ export default function ScratchCard({ id, image, onScratch }: CardsProps) {
   };
 
   return (
-    <div>
+    <div className='cardbox'>      
       <div className="scratch-card" onClick={handleScratch}>
-         <img src={image} alt={`Card ${id}`} />
+        <img src={image} alt={`Card ${id}`} className={'cardsImage'} />
       </div>
 
     </div>

@@ -1,0 +1,32 @@
+.container-geral {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  margin: 5px;
+}
+.cardbox {
+}
+.scratch-cards-container {
+  margin: 5px;
+}
+
+.scratch-card {
+  width: 45vh;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.cardsImage {
+  width: 40vh;
+  height: 130px;
+  border: 1px solid #ccc;
+  border-radius: 107px;
+  object-fit: cover;
+}
