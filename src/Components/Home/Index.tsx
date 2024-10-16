@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ScratchCard from "../Cards";
-import bagImage from '../../Assets/img/bag.png';
+import bagImage from '../../Assets/img/bag.png'
 
 interface ScratchCardProps {
     id: number;

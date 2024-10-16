@@ -11,11 +11,10 @@ export default function ScratchCard({ id, image, onScratch }: CardsProps) {
     onScratch(id);
   };
 
-
   return (
     <div>
       <div className="scratch-card" onClick={handleScratch}>
-        {image}
+         <img src={image} alt={`Card ${id}`} />
       </div>
 
     </div>
