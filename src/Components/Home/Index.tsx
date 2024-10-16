@@ -1,11 +1,45 @@
+import { useState } from "react";
+import ScratchCard from "../Cards";
 
+interface ScratchCardProps {
+    id: number;
+    image: string;
+    onScratch: (id: number) => void;
+}
 
-export default function HomePage() {
+export default function HomePage({ id, image, onScratch }: ScratchCardProps) {
+
+    const [cards, setCards] = useState([
+        { id: 1, image: '/path/to/image1.jpg' },
+        { id: 2, image: '/path/to/image2.jpg' },
+        { id: 3, image: '/path/to/image3.jpg' },
+        { id: 4, image: '/path/to/image4.jpg' },
+    ]);
+
+    const shuffleCards = () => {
+        const shuffled = [...cards].sort(() => Math.random() - 0.5);
+        setCards(shuffled);
+    };
+
+    const handleScratch = (id: number) => {
+        onScratch(id);
+    };
+
     return (
         <div className="home__container">
-            <h1>Raspadinha</h1>
-            <h2>logo</h2>
+            {cards.map((cards) => (
+                <ScratchCard
+                    key={cards.id}
+                    id={cards.id}
+                    image={cards.image}
+                    onScratch={handleScratch}
+                />
+            ))}
 
+            <div>
+                <button onClick={shuffleCards} >Reiniciar Cards</button>
+                <img src={image} alt={`Card ${id}`} />
+            </div>
         </div>
     )
 }
