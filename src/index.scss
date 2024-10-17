@@ -23,7 +23,31 @@ body {
     #207cca 90%,
     #509dd8 100%
   );
-  height: 99.5\vh;
+  height: 99.4vh;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+h1 {
+  margin-top: 10px;
+}
+
+@media (min-width: 1080px) and (max-width: 1080px) {
+  .scratch-card {
+    height: 16vh;
+  }
+  .cardsImage {
+    width: 35vh;
+    height: 220px;
+  }
+  .container-geral {
+    margin: 10px 0 0 0;
+  }
+  .button-reset {
+    width: 3vh;
+    height: 3vh;
+  }
+  h1 {
+    margin-top: 50px;
+  }
 }
