@@ -44,7 +44,7 @@ export default function HomePage({ onScratch }: ScratchCardProps) {
     return (
         <div className="container-geral">
             <h1>Raspadinha</h1>
-            <img src={logoImage} alt="" />
+            <img src={logoImage} alt="logo" className="logo" />
             <div className="scratch-cards-container"> {cards.map((cards) => (
                 <ScratchCard
                     key={cards.id}
