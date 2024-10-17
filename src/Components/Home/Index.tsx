@@ -4,6 +4,7 @@ import bagImage from '../../Assets/img/bag.png'
 import loseImage from '../../Assets/img/lose.png'
 import yellowImage from '../../Assets/img/yellow.png'
 import retryImage from '../../Assets/img/Retry.png'
+import { IoReload } from "react-icons/io5";
 import '../../App.scss'
 
 interface ScratchCardProps {
@@ -12,7 +13,7 @@ interface ScratchCardProps {
     onScratch: (id: number) => void;
 }
 
-export default function HomePage({ id, image, onScratch }: ScratchCardProps) {
+export default function HomePage({ onScratch }: ScratchCardProps) {
 
     const [cards, setCards] = useState([
         { id: 1, image: bagImage },
@@ -36,18 +37,15 @@ export default function HomePage({ id, image, onScratch }: ScratchCardProps) {
 
             <div className="scratch-cards-container"> {cards.map((cards) => (
                 <ScratchCard
-
                     key={cards.id}
                     id={cards.id}
                     image={cards.image}
                     onScratch={handleScratch}
                 />
             ))}
-
-                <div className="button-reset">
-                    <button onClick={shuffleCards} >Reiniciar Cards</button>
-                    <img src={image} alt={`Card ${id} ${image}`} />
-                </div>
+                <button onClick={shuffleCards} >
+                    <IoReload className="button-reset" />
+                </button>
             </div>
         </div>
     )

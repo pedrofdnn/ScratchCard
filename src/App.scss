@@ -1,16 +1,15 @@
 .container-geral {
   display: flex;
-  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   align-content: center;
   margin: 5px;
 }
-.cardbox {
-}
+
 .scratch-cards-container {
   margin: 5px;
+  text-align: center;
 }
 
 .scratch-card {
@@ -29,4 +28,51 @@
   border: 1px solid #ccc;
   border-radius: 107px;
   object-fit: cover;
+}
+
+button {
+  text-align: center;
+  text-decoration: none;
+  background-color: #00aea0;
+  position: relative;
+  padding: 5px 10px;
+  display: inline-block;
+  margin: 20px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #065e56;
+  border-radius: 5px;
+  border: none;
+}
+
+button::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  padding: 4px;
+  position: absolute;
+  bottom: -15px;
+  left: -4px;
+  z-index: -1;
+  background-color: #2b1800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+button:active {
+  top: 10px;
+  background-color: #065e56;
+  -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #065e56;
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3pxpx 0 #065e56;
+  box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #065e56;
+}
+
+.button-reset {
+  width: 10vh;
+  height: 10vh;
+  background-color: #00aea0;
+  color: #ffffff;
+  border-radius: 20px;
+  align-items: center;
 }
