@@ -11,10 +11,10 @@ interface ScratchCardProps {
 
 const scratchCardSettings = {
   width: 300,
-  height: 150,
+  height: 130,
   image: coverImage,
-  finishPercent: 80, 
-  onComplete: () => ('') 
+  finishPercent: 97,
+  color: '#C5C5C5',
 };
 
 export default function Scratch({ id, image, onScratch }: ScratchCardProps) {
@@ -23,10 +23,12 @@ export default function Scratch({ id, image, onScratch }: ScratchCardProps) {
   };
 
   return (
-    <div className="scratch-card-container">
-      <ScratchCard color={''} {...scratchCardSettings}>
-        <img src={image || hiddenImage} alt={`Card ${id}`} className="cardsImage" />
-      </ScratchCard>
+    <div className="cardbox">
+      <div className="scratch-card" onClick={handleScratch}>
+        <ScratchCard {...scratchCardSettings}  >
+          <img src={image || hiddenImage} alt={`Card ${id}`} className="cardsImage" />
+        </ScratchCard>
+      </div>
     </div>
   );
 }
