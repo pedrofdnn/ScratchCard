@@ -13,7 +13,7 @@ const scratchCardSettings = {
   width: 300,
   height: 130,
   image: coverImage,
-  finishPercent: 97,
+  finishPercent: 96,
   color: '#C5C5C5',
 };
 

@@ -22,12 +22,20 @@
   margin: 10px;
 }
 
-.cardsImage,ScratchCard {
+.ScratchCard__Canvas {
   width: 40vh;
-  height: 130px;
-  border: 1px solid #ccc;
+  left: 0%;
+  height: 14vh;
   border-radius: 107px;
   object-fit: cover;
+}
+
+.cardsImage {
+  width: 40vh;
+  height: 130px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 107px;
 }
 
 button {
@@ -81,5 +89,3 @@ button:active {
   width: 40vh;
   margin: 0;
 }
-
-
