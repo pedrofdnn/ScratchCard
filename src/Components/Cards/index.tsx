@@ -10,7 +10,7 @@ interface ScratchCardProps {
 }
 
 const scratchCardSettings = {
-  width: 300,
+  width: 360,
   height: 130,
   image: coverImage,
   finishPercent: 96,
