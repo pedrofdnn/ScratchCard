@@ -18,7 +18,7 @@ interface ScratchCardProps {
 export default function HomePage({ onScratch }: ScratchCardProps) {
 
     const [cards, setCards] = useState([
-        { id: 1, image: bagImage },
+        { id: 1, image: bagImage, count: 0 },
         { id: 2, image: loseImage },
         { id: 3, image: retryImage },
         { id: 4, image: yellowImage },
@@ -37,6 +37,11 @@ export default function HomePage({ onScratch }: ScratchCardProps) {
         onScratch(id);
     };
 
+    const resetGame = () => {
+        shuffleCards()
+        window.location.reload();
+    };
+
     useEffect(() => {
         shuffleCards();
     }, []);
@@ -53,7 +58,7 @@ export default function HomePage({ onScratch }: ScratchCardProps) {
                     onScratch={handleScratch}
                 />
             ))}
-                <button onClick={shuffleCards} >
+                <button onClick={resetGame} >
                     <IoReload className="button-reset" />
                 </button>
             </div>
