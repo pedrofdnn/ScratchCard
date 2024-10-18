@@ -35,7 +35,10 @@ h1 {
 
 @media (min-width: 1080px) and (max-width: 1200px) and (orientation: portrait) {
   .scratch-card {
-    height: 16vh;
+    display: block;
+    position: relative;
+    height: 18vh;
+    left: 5vh;
   }
   .cardsImage {
     width: 35vh;
@@ -46,11 +49,9 @@ h1 {
     height: 8vh;
   }
   .ScratchCard__Canvas {
-    width: 30vh;
+    width: 35vh;
     left: 0%;
-    height: 14vh;
-    border-radius: 107px;
-    object-fit: cover;
+    height: 11.5vh;
   }
   .container-geral {
     margin: 10px 0 0 0;
