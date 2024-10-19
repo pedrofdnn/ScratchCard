@@ -11,15 +11,19 @@ import '../../App.scss'
 
 export default function HomePage() {
 
-    const [revealedCount, setRevealedCount] = useState(0);
     const [maxRevealsForImageChange, setMaxRevealsForImageChange] = useState(3);
-
+  
     const [cards, setCards] = useState([
         { id: 1, image: bagImage, isRevealed: false },
         { id: 2, image: loseImage, isRevealed: false },
         { id: 3, image: retryImage, isRevealed: false },
         { id: 4, image: yellowImage, isRevealed: false },
     ]);
+
+    const [revealedCount, setRevealedCount] = useState(() => {
+        const storedCount = localStorage.getItem('revealedCount');
+        return storedCount ? parseInt(storedCount) : 0;
+    });
 
     const shuffleCards = () => {
         const shuffled = [...cards];
@@ -53,15 +57,13 @@ export default function HomePage() {
         console.log(id)
     };
 
-    const resetOverlay = () => {
-        // Logic to reset the overlay image (e.g., using a ref or state)
-    };
-
     const resetGame = () => {
         shuffleCards();
-        setCards(prevCards => prevCards.map(card => ({ ...card, isRevealed: false })));
-        setRevealedCount(0);
-        setMaxRevealsForImageChange(3); // Reinicie o limite para um novo jogo
+        setMaxRevealsForImageChange(3);
+        // Update localStorage with the current revealedCount
+        localStorage.setItem('revealedCount', revealedCount.toString());
+        // Force a full page reload to ensure state updates are reflected
+        window.location.reload();
     };
 
     useEffect(() => {
@@ -79,7 +81,8 @@ export default function HomePage() {
                     image={cards.image}
                     onScratch={handleScratch}
                     isRevealed={cards.isRevealed}
-                    resetOverlay={resetOverlay}
+
+
                 />
             ))}
                 <button onClick={resetGame} >
