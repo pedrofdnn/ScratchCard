@@ -65,13 +65,13 @@ h1 {
   }
 }
 
-@media (min-width: 720px) and (max-width: 1440px) {
+@media (min-width: 1199px) and (max-width: 1439px) {
   body {
     height: 99.5vh;
     font-size: 10px;
   }
   .logo {
-    width: 20vh;
+    width: 500vh;
   }
   .cardsImage {
     width: 40vh;
