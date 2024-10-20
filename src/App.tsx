@@ -1,4 +1,4 @@
-import HomePage from "./Components/Home/test";
+import HomePage from "./Components/Home/Index";
 import './index.scss'
 
 export default function App() {
