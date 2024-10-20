@@ -12,7 +12,7 @@ import '../../App.scss'
 export default function HomePage() {
 
     const [maxRevealsForImageChange, setMaxRevealsForImageChange] = useState(3);
-  
+
     const [cards, setCards] = useState([
         { id: 1, image: bagImage, isRevealed: false },
         { id: 2, image: loseImage, isRevealed: false },
@@ -38,10 +38,17 @@ export default function HomePage() {
     const handleScratch = (id: number) => {
         setCards(prevCards =>
             prevCards.map(card =>
-                card.id === id ? { ...card, isRevealed: true } : card
+                // Só atualiza o estado se a imagem ainda não foi revelada
+                card.id === id && !card.isRevealed ? { ...card, isRevealed: true } : card
             )
         );
-        setRevealedCount(prevCount => prevCount + 1);
+
+        // Incrementa a contagem apenas se o cartão ainda não foi revelado
+        if (!cards.find(card => card.id === id)?.isRevealed) {
+            setRevealedCount(prevCount => prevCount + 1);
+        }
+
+        // Verifica se o limite de revelações foi atingido para alterar a imagem
         if (revealedCount >= maxRevealsForImageChange) {
             const cardToChange = cards.find(card => card.isRevealed && card.image === bagImage);
             if (cardToChange) {
@@ -50,20 +57,25 @@ export default function HomePage() {
                         card.id === cardToChange.id ? { ...card, image: loseImage } : card
                     )
                 );
-            } else {
-
             }
         }
-        console.log(id)
+        console.log(id);
     };
 
     const resetGame = () => {
         shuffleCards();
         setMaxRevealsForImageChange(3);
-        // Update localStorage with the current revealedCount
         localStorage.setItem('revealedCount', revealedCount.toString());
-        // Force a full page reload to ensure state updates are reflected
         window.location.reload();
+    };
+
+    const handleResetPress = () => {
+        const timer = setTimeout(() => {
+            localStorage.setItem('revealedCount', '0');
+            setRevealedCount(0);
+            alert('Contagem Reiniciada')
+        }, 7000);
+        return () => clearTimeout(timer);
     };
 
     useEffect(() => {
@@ -81,14 +93,16 @@ export default function HomePage() {
                     image={cards.image}
                     onScratch={handleScratch}
                     isRevealed={cards.isRevealed}
-
-
                 />
             ))}
-                <button onClick={resetGame} >
+                <button onClick={resetGame}
+                    onMouseDown={handleResetPress}
+                    onMouseUp={handleResetPress}
+                >
                     <IoReload className="button-reset" />
                 </button>
             </div>
         </div>
     )
 }
+console.log(localStorage)
