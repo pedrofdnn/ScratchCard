@@ -50,6 +50,7 @@ h1 {
   body {
     height: 99.6vh;
   }
+
   .scratch-card {
     width: 180px;
   }
@@ -61,23 +62,39 @@ h1 {
 
 @media (max-width: 1024px) {
   h1 {
-    font-size: 2rem;
+    font-size: 5rem;
+    margin: 2vh;
   }
   .logo {
-    width: 30vh;
+    width: 45vh;
+    margin: 0 0 30px;
   }
   .cardsImage {
-    height: 118px;
+    height: 144px;
+    width: 400px;
+    
+  }
+  .ScratchCard__Canvas {
+    height: 144px;
+    width: 400px;
+   
+  }
+  .ScratchCard__Container {
+    width: 400px;
+    left: -20px;
   }
   .scratch-card {
     margin: 0;
   }
+  .scratch-card {
+    height: 200px;
+  }
 }
 
 @media (max-width: 768px) {
-  .ScratchCard__Canvas {
-    height: 118px;
-  }
+  // .ScratchCard__Canvas {
+  //   height: 118px;
+  // }
 }
 
 @media (max-width: 375px) {
