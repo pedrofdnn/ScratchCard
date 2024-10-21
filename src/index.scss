@@ -24,7 +24,7 @@ body {
     #207cca 90%,
     #509dd8 100%
   );
-  height: 99.4vh;
+  height: 99.5vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -33,77 +33,34 @@ h1 {
   margin-top: 10px;
 }
 
-@media (min-width: 1080px) and (max-width: 1200px) and (orientation: portrait) {
+@media (max-width: 1920px) {
   .scratch-card {
-    display: block;
-    position: relative;
-    height: 18vh;
-    left: 5vh;
-  }
-  .cardsImage {
-    width: 35vh;
-    height: 220px;
-  }
-  .ScratchCard__Container {
-    width: 50vh;
-    height: 8vh;
+    height: 162px;
   }
   .ScratchCard__Canvas {
-    width: 35vh;
-    left: 0%;
-    height: 11.5vh;
-  }
-  .container-geral {
-    margin: 10px 0 0 0;
-  }
-  .button-reset {
-    width: 3vh;
-    height: 3vh;
-  }
-  h1 {
-    margin-top: 50px;
-  }
-}
-
-@media (min-width: 1199px) and (max-width: 1439px) {
-  body {
-    height: 99.5vh;
-    font-size: 10px;
-  }
-  .logo {
-    width: 500vh;
-  }
-  .cardsImage {
-    width: 40vh;
-    height: 104px;
-  }
-  .scratch-card {
-    width: 40vh;
-    height: 120px;
-    margin: 1px;
-  }
-  .cardsImage {
-    width: 25vh;
-    height: 75px;
-  }
-}
-
-@media (min-width: 800px) and (max-width: 1280px) {
-  body {
-    height: 99.5vh;
-  }
-  .scratch-card {
-    display: flex;
-    align-items: center;
-    margin: 60px;
-  }
-  .cardsImage {
-    width: 28vh;
+    width: 360px;
     height: 130px;
-    border-radius: 107px;
   }
-  .ScratchCard__Canvas {
-    width: 28vh;
-    height: 10vh;
+  .cardsImage {
+    width: 360px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .scratch-card {
+    width: 180px;
+  }
+
+  .cardsImage {
+    height: 130px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cardsImage {
+    height: 118px;
+  }
+  .scratch-card {
+    margin: 0;
   }
 }
