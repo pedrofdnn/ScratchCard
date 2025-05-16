@@ -1,6 +1,6 @@
 # Raspadinha Liv-Saude.
 
-Esse foi um pequeno projeto realizado para ser utilizado para os visitantes do stand.
+Esse foi um pequeno projeto realizado para ser utilizado para os visitantes do stand, no evento do Siará Tech Summit 2024.
 
 ## Funcionalidades
 
