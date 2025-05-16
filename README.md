@@ -1,4 +1,4 @@
-# Raspadinha Liv-Saude.
+# Raspadinha Liv-Saude
 
 Esse foi um pequeno projeto realizado para ser utilizado para os visitantes do stand, no evento do Siará Tech Summit 2024.
 
@@ -13,3 +13,6 @@ Esse foi um pequeno projeto realizado para ser utilizado para os visitantes do s
 
 ![App Screenshot](https://raw.githubusercontent.com/pedrofdnn/Assents/refs/heads/main/Scrat%20Card/1.png)
 ![App Screenshot](https://raw.githubusercontent.com/pedrofdnn/Assents/refs/heads/main/Scrat%20Card/2.png)
+
+## Link do Projeto
+https://scratch-card-liart.vercel.app/
