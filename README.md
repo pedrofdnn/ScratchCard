@@ -11,4 +11,5 @@ Esse foi um pequeno projeto realizado para ser utilizado para os visitantes do s
 
 ## Screenshots
 
-![App Screenshot]([https://via.placeholder.com/468x300?text=App+Screenshot+Here](https://github.com/pedrofdnn/Assents/blob/main/Scrat%20Card/1.png?raw=true))
+![App Screenshot](https://raw.githubusercontent.com/pedrofdnn/Assents/refs/heads/main/Scrat%20Card/1.png)
+![App Screenshot](https://raw.githubusercontent.com/pedrofdnn/Assents/refs/heads/main/Scrat%20Card/2.png)
